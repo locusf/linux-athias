@@ -223,7 +223,7 @@ void save_stack_trace_asus(struct task_struct *tsk, struct stack_trace *trace)
 {  
     asus_save_stack = 1;
     asus_strace = trace;
-    unwind_backtrace(NULL, tsk);
+    dump_backtrace(NULL, tsk);
     asus_save_stack = 0;
 }
 
